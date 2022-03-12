@@ -9,9 +9,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 @app.get("/")
 def index_get():
-    return "Ayushi Mittal"
+    return render_template("base.html")
+
 
 @app.post("/predict")
 def predict():
