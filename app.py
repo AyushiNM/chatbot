@@ -9,6 +9,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.get("/")
+def index_get():
+    return "Ayushi Mittal"
+
 @app.post("/predict")
 def predict():
     text = request.get_json().get("message")
