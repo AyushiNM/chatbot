@@ -4,10 +4,7 @@ from urllib import response
 from flask import Flask, jsonify, render_template, request
 from infer import get_response
 
-from flask_cors import CORS
-
 app = Flask(__name__)
-CORS(app)
 
 
 @app.get("/")
